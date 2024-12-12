@@ -1,20 +1,23 @@
 import { Header } from "../Components/Header"
 import { Footer } from "../Components/Footer"
+import seaImage from "../assets/img/sea-image.png"
+import { PropertiesApi } from "../Api/PropertiesApi";
+import { Link } from 'react-router-dom'
 export function Home(){
+    const locations = PropertiesApi();
+    console.log(locations);
     return <>
     <Header/>
     <main>
-        <div class="image-container">
-            {/* <img src="./assets/img/sea-image.png" alt="first image"> */}
-            <div class="text-overlay">Chez vous, partout et ailleurs</div>
+        <div className="image-container">
+            <img src={seaImage} alt="first image"/>
+            <div className="text-overlay">Chez vous, partout et ailleurs</div>
         </div>
-        <div class="main-select-location">
-            <div class="child-select-location">Titre de la location</div>
-            <div class="child-select-location">Titre de la location</div>
-            <div class="child-select-location">Titre de la location</div>
-            <div class="child-select-location">Titre de la location</div>
-            <div class="child-select-location">Titre de la location</div>
-            <div class="child-select-location">Titre de la location</div>
+        <div className="main-select-location">
+        {locations.map((loc, id) => {
+            return  (<Link to={`/location/${loc.id}`} key={id}><div className="child-select-location" >{loc.title}</div></Link>)
+
+        })}
         </div>
     </main>
     <Footer/>

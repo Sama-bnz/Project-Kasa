@@ -1,11 +1,12 @@
 import { Header } from "../Components/Header"
 import { Footer } from "../Components/Footer"
+import mountain from "../assets/img/mountain.png"
 export const Apropos = ()=>{
     return <>
     <Header/>
     <main>
         <div class="image-container">
-            {/* <img src="./assets/img/mountain.png" alt="Mountain image"> */}
+            <img src={mountain} alt="Mountain image"/>
         </div>
 
         <div class="dropdown-container">

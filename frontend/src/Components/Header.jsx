@@ -1,9 +1,12 @@
+import logo from "../assets/img/LOGO.png"
+import {Link, NavLink } from 'react-router-dom'
+
 export const Header = ()=>{
-    return <> <header class="header">
-    {/* <img src="./assets/img/LOGO.png" alt="logo"> */}
-        <nav class="nav-list">
-            <li>Accueil</li>
-            <li>A propos</li>
+    return <> <header className="header">
+    <img src={logo} alt="logo"/>
+        <nav className="nav-list">
+        <li><NavLink to="/" className={({ isActive }) => (isActive ? 'active' : '')}>Accueil</NavLink></li>
+        <li><NavLink to="/apropos" className={({ isActive }) => (isActive ? 'active' : '')}>A propos</NavLink></li>
         </nav>
     </header></>
 }

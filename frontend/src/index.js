@@ -17,7 +17,7 @@ root.render(
         <Route path="/" exact element={<Home />} />
         <Route path="/home" exact element={<Home />} />
         <Route path="/apropos" exact element={<Apropos />} />
-        <Route path="/location" exact element={<Location />} />
+        <Route path="/location/:id" exact element={<Location />} />
         <Route path="*" exact element={<NotFound/>}/>
       </Routes>
     </BrowserRouter>
