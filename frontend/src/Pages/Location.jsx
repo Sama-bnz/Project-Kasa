@@ -2,9 +2,13 @@ import { Header } from "../Components/Header"
 import { Footer } from "../Components/Footer"
 import carroussel from "../assets/img/Carrousel.png"
 import { useParams } from 'react-router-dom'
+import { Collapse } from "../Components/Collapse"
+import { PropertiesApiById } from "../Api/PropertiesApiById"
 export const Location = ()=>{
     const locationRouteParam = useParams();
+    const location = PropertiesApiById(locationRouteParam.id);
     console.log(locationRouteParam.id);
+    console.log(location);
     return <>
     <Header/>
     <main>
@@ -40,8 +44,18 @@ export const Location = ()=>{
             </div>
         
             <div className="buttons-section">
-                <button className="button">Description <span className="arrow">⬆</span></button>
-                <button className="button">Équipements <span className="arrow">⬆</span></button>
+                <Collapse title="Description">
+                        <p>{location.description}</p>
+                </Collapse>                
+                <Collapse title="Équipements">
+                        <div>
+                            <ul>
+                                {location.equipments.map((equip, index) =>
+                                    <li key={index}>{equip}</li>
+                                )}
+                            </ul>
+                        </div>
+                </Collapse>            
             </div>
         </div>
 

@@ -181,6 +181,11 @@ header{
   cursor: pointer;
   transition: all 0.3s ease;
 }
+.dropdown-title{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
 .dropdown-header {
   padding: 15px 20px;
   font-size: 18px;
@@ -201,6 +206,9 @@ header{
   color: #333;
   display: none; 
   border-top: 1px solid #ff6f6f;
+}
+.active-dropdown{
+  display: block;
 }
 .dropdown.open .dropdown-content {
   display: block;
