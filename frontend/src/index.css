@@ -187,6 +187,7 @@ header{
   align-items: center;
 }
 .dropdown-header {
+  width: 450px;
   padding: 15px 20px;
   font-size: 18px;
   font-weight: bold;
@@ -370,12 +371,15 @@ header{
   font-size: 24px;
   cursor: pointer;
 }
+.avatar {
+  border-radius: 50%;
+}
 /* .nav-list li:active {
   text-decoration: underline;
 } */
 /* MAIN */
 .property-container {
-  max-width: 1200px;
+  /* max-width: 1200px; */
   margin: 20px auto;
   background: white;
   border-radius: 10px;
@@ -410,12 +414,13 @@ header{
 /* Details Section */
 .details-section {
   padding: 20px;
+  padding-bottom: 0;
 }
 .top-row {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-bottom: 10px;
+  /* margin-bottom: 10px; */
 }
 .property-title {
   font-size: 24px;
@@ -426,6 +431,7 @@ header{
 .property-location {
   font-size: 16px;
   color: #666;
+  margin-top: 0;
 }
 .tags-rating {
   display: flex;
@@ -443,7 +449,7 @@ header{
   background: #ff6f6f;
   color: white;
   padding: 5px 10px;
-  border-radius: 5px;
+  border-radius: 10px;
   font-size: 14px;
 }
 
@@ -465,12 +471,12 @@ header{
 
 .author p {
   margin: 0;
-  font-size: 16px;
+  font-size: 24px;
 }
 
 .author-avatar {
-  width: 40px;
-  height: 40px;
+  width: 64px;
+  height: 64px;
   background: lightgray;
   border-radius: 50%;
 }
@@ -495,6 +501,8 @@ header{
   display: flex;
   justify-content: space-evenly;
   padding: 20px;
+  padding-top: 0;
+  gap: 70px;
 }
 
 .button {
@@ -548,4 +556,8 @@ header{
 
 nav a.active{
   color: green;
+}
+
+.removeUnderLine{
+  text-decoration: none;
 }

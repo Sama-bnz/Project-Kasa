@@ -15,7 +15,7 @@ export function Home(){
         </div>
         <div className="main-select-location">
         {locations.map((loc, id) => {
-            return  (<Link to={`/location/${loc.id}`} key={id}><div className="child-select-location" >{loc.title}</div></Link>)
+            return  (<Link to={`/location/${loc.id}`} key={id} className="removeUnderLine"><div className="child-select-location" >{loc.title}</div></Link>)
 
         })}
         </div>
