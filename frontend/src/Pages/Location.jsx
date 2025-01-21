@@ -5,6 +5,9 @@ import { useParams } from "react-router-dom";
 import { Collapse } from "../Components/Collapse";
 import { PropertiesApiById } from "../Api/PropertiesApiById";
 import { Navigate } from "react-router-dom";
+import { Slider } from "../Components/Slider";
+import Vector_G from "../assets/img/Vector_G.png";
+import Vector_D from "../assets/img/Vector_D.png";
 
 export const Location = () => {
   const locationRouteParam = useParams();
@@ -15,14 +18,7 @@ export const Location = () => {
         <Header />
         <main>
           <div className="property-container">
-            <div className="image-section">
-              <img
-                src={carroussel}
-                alt="Cozy Loft"
-                className="property-image"
-              />
-            </div>
-
+             {location?.pictures ? <Slider slides={location?.pictures}></Slider>:null}
             <div className="details-section">
               <div className="top-row">
                 <h1 className="property-title">{location?.title}</h1>

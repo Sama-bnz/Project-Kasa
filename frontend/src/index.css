@@ -361,7 +361,9 @@ header{
   justify-content: space-between;
   align-items: center;
 }
-
+.carroussel-box>img {
+  object-fit: cover;
+}
 .nav-list{
   list-style: none;
   display: flex;
@@ -373,6 +375,16 @@ header{
 }
 .avatar {
   border-radius: 50%;
+}
+.left-arrow{
+  position: absolute;
+  margin-top: 13%;
+}
+.right-arrow{
+  position: absolute;
+  top: 0;
+  right: 0;
+  margin-top: 13%;
 }
 /* .nav-list li:active {
   text-decoration: underline;
