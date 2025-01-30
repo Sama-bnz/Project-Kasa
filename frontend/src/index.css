@@ -363,6 +363,7 @@ header{
 }
 .carroussel-box>img {
   object-fit: cover;
+  height: 400px;
 }
 .nav-list{
   list-style: none;
@@ -385,6 +386,14 @@ header{
   top: 0;
   right: 0;
   margin-top: 13%;
+}
+.bulletPoint{
+  position: absolute;
+  color: white;
+  margin-top: 26%;
+  font-weight: bold;
+  font-size: 18px;
+  margin-left: 50%;
 }
 /* .nav-list li:active {
   text-decoration: underline;

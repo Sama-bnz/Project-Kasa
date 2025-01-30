@@ -1,15 +1,16 @@
 import { Header } from "../Components/Header";
 import { Footer } from "../Components/Footer";
-import carroussel from "../assets/img/Carrousel.png";
 import { useParams } from "react-router-dom";
 import { Collapse } from "../Components/Collapse";
 import { PropertiesApiById } from "../Api/PropertiesApiById";
 import { Navigate } from "react-router-dom";
 import { Slider } from "../Components/Slider";
-import Vector_G from "../assets/img/Vector_G.png";
-import Vector_D from "../assets/img/Vector_D.png";
+import { Star } from "../Components/Star";
 
+const createArray = length => [...Array(length)];
+const parseToInt = s => parseInt(s);
 export const Location = () => {
+  
   const locationRouteParam = useParams();
   const location = PropertiesApiById(locationRouteParam.id);
   if (location != null && location !== undefined) {
@@ -48,12 +49,9 @@ export const Location = () => {
                   ))}
                 </div>
                 <div className="rating">
-                  <span className="star filled">★</span>
-                  <span className="star filled">★</span>
-                  <span className="star filled">★</span>
-                  <span className="star">★</span>
-                  <span className="star">★</span>
-                </div>
+                {createArray(5).map((nb,i) => (
+                  <Star key={i} selected={parseToInt(location?.rating) > i} />
+                ))}
               </div>
             </div>
 
@@ -72,6 +70,7 @@ export const Location = () => {
               </Collapse>
             </div>
           </div>
+        </div>
         </main>
         <Footer />
       </>
