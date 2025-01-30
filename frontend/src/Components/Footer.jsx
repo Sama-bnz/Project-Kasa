@@ -1,4 +1,6 @@
 import logo from "../assets/img/LOGO.png"
+import '../styles/footer.css'
+
 export const Footer = ()=>{
     return <><footer className="footer">
         <div className="footer-content">

@@ -1,4 +1,3 @@
-import { Header } from "../Components/Header"
 import { Footer } from "../Components/Footer"
 import seaImage from "../assets/img/sea-image.png"
 import { PropertiesApi } from "../Api/PropertiesApi";
@@ -7,8 +6,6 @@ export function Home(){
     const locations = PropertiesApi();
     console.log(locations);
     return <>
-    <Header/>
-    <main>
         <div className="image-container">
             <img src={seaImage} alt="first image"/>
             <div className="text-overlay">Chez vous, partout et ailleurs</div>
@@ -19,7 +16,5 @@ export function Home(){
 
         })}
         </div>
-    </main>
-    <Footer/>
     </>
 }

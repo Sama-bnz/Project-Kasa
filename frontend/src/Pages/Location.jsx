@@ -16,8 +16,6 @@ export const Location = () => {
   if (location != null && location !== undefined) {
     return (
       <>
-        <Header />
-        <main>
           <div className="property-container">
              {location?.pictures ? <Slider slides={location?.pictures}></Slider>:null}
             <div className="details-section">
@@ -71,8 +69,6 @@ export const Location = () => {
             </div>
           </div>
         </div>
-        </main>
-        <Footer />
       </>
     );
   } else {

@@ -9,8 +9,6 @@ export const Apropos = ()=>{
         setActive(!active)
     };
     return <>
-    <Header/>
-    <main>
         <div className="image-container">
             <img src={mountain} alt="Mountain image"/>
         </div>
@@ -33,7 +31,5 @@ export const Apropos = ()=>{
                     Nous organisons également des ateliers sur la sécurité domestique pour nos hôtes.</p>
             </Collapse>
         </div>
-    </main>
-    <Footer/>
     </>
 }

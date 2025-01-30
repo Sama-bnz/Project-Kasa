@@ -6,12 +6,12 @@ export function Collapse(props){
         setActive(!active)
     };
     return (
-        <div className="dropdown">
+        <div className={`dropdown ${active ? "open" : ""}`}>
             <div className="dropdown-title" onClick={toggleAccordion}>
                 <div className="dropdown-header">{props.title}</div>
-                <div className="dropdown-arrow">▲</div>
+                <div className="dropdown-arrow">{active ? "▼" : "▲"}</div>
             </div>
-            <div className={`dropdown-content ${active && "active-dropdown"}`}>
+            <div className={`dropdown-content ${active ? "active-dropdown" : ""}`}>
                 {props.children}
             </div>
         </div>
