@@ -1,5 +1,6 @@
 import { Header } from "../Components/Header"
 import { Footer } from "../Components/Footer"
+import '../styles/404.css'
 export const NotFound = ()=>{
     return <>
     <Header/>

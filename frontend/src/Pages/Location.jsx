@@ -1,11 +1,11 @@
-import { Header } from "../Components/Header";
-import { Footer } from "../Components/Footer";
+
 import { useParams } from "react-router-dom";
 import { Collapse } from "../Components/Collapse";
 import { PropertiesApiById } from "../Api/PropertiesApiById";
 import { Navigate } from "react-router-dom";
 import { Slider } from "../Components/Slider";
 import { Star } from "../Components/Star";
+import '../styles/location.css'
 
 const createArray = length => [...Array(length)];
 const parseToInt = s => parseInt(s);
@@ -28,10 +28,6 @@ export const Location = () => {
                       className="avatar"
                       src={location?.host?.picture}
                       alt={"Photo of " + location?.host?.name}
-                      style={{
-                        width: 64,
-                        height: 64,
-                      }}
                     />
                   </div>
                 </div>

@@ -1,0 +1,51 @@
+.error-page {
+    text-align: center;
+    font-family: Arial, sans-serif;
+    margin: 63px 0;
+    padding: 0;
+}
+  
+.error-container {
+    display: flex;
+    flex-direction: column;
+    gap: 80px; 
+}
+  
+.error-code {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 250px; 
+    font-weight: 700;
+    color: #ff6f6f; 
+    margin: 0;
+}
+  
+.error-message {
+    font-size: 36px;
+    color: #ff6f6f;
+    margin: 0;
+}
+  
+.error-button {
+    font-size: 18px;
+    color: black; 
+    background: none; 
+    border: none;
+    text-decoration: underline; 
+    cursor: pointer; 
+    font-weight: bold; 
+}
+  
+.error-button:hover {
+    color: #ff6f6f; 
+}
+
+/* Resposive mobile */
+@media screen and (max-width: 768px) {
+    .error-page{
+        margin: 50px 0;
+    }
+    .error-container{
+        gap: 50px;
+    }
+   
+}

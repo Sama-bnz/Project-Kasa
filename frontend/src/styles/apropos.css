@@ -1,0 +1,14 @@
+/* CSS APROPOS */
+body{
+    margin: 0;
+    padding: 10px 100px;
+    max-width: 1440px;
+    margin: 0 auto;
+  }
+  .dropdown-container {
+    margin: 20px auto;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    align-items: center;
+}

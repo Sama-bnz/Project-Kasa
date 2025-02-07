@@ -1,8 +1,9 @@
-import { Header } from "../Components/Header"
-import { Footer } from "../Components/Footer"
+
 import mountain from "../assets/img/mountain.png"
 import { useState } from "react"
 import {Collapse} from "../Components/Collapse"
+import '../styles/apropos.css'
+
 export const Apropos = ()=>{
     const [active, setActive] = useState(false);
     const toggleAccordion = e => {
