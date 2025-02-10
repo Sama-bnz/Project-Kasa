@@ -28,6 +28,7 @@
   }
 
   @media screen and (max-width: 375px) {
+  
     .logo-footer{
       width: 122px;
     }
