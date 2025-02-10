@@ -5,10 +5,38 @@ body{
     max-width: 1440px;
     margin: 0 auto;
   }
+  .image-container-about {
+    position: relative; 
+    width: 100%;
+    height: 223px;
+    overflow: hidden;
+    border-radius: 15px;
+    margin: 20px auto;
+
+  }.image-container-about img{
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: brightness(60%);
+  }
+  .aboutCollapse{
+    width: 80% !important;
+  }
   .dropdown-container {
     margin: 20px auto;
     display: flex;
     flex-direction: column;
     gap: 15px;
     align-items: center;
+}
+
+@media screen and (max-width: 375px) {
+  .aboutCollapse{
+    width: 355px !important;
+  }
+  .image-container-about {
+    width: 98%;
+    height: 111px;
+}
 }

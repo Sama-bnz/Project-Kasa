@@ -12,7 +12,6 @@ export const Slider = ({slides}) =>{
     const prevSlide = () => {
         setCurrent(current === 0 ? length - 1 : current - 1);
     };
-    // console.log(slides);
     return (<><div className="image-section">
                 {slides.length>1 ? <img  src={Vector_G} className="left-arrow" onClick={prevSlide} alt="left arrow"/>: null}
                 {slides.length>1 ?<span className="bulletPoint">{current+1}/{length}</span>: null}
